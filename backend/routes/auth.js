@@ -111,7 +111,6 @@ router.post('/brand/login', async (req, res) => {
     console.log("User found:", user);
 
     // Find user
-    const user = await User.findOne({ email, userType: 'brand' });
     if (!user) {
       return res.status(400).json({ message: 'Invalid credentials' });
     }
